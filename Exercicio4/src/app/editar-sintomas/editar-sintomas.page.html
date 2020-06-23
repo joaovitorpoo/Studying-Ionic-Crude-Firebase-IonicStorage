@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ title + " "+ "Sintoma" }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Intensidade</ion-label>
+      <ion-input type="text" name="intensidade" [(ngModel)]="model.intensidade"></ion-input>
+    </ion-item>
+    <ion-item> 
+      <ion-label>Data</ion-label>
+      <ion-datetime [(ngModel)]="model.data" name="data" displayFormat="DD/MM/YYYY"></ion-datetime>
+    </ion-item>
+    <ion-item> 
+      <ion-label>Descrição</ion-label>
+      <ion-textarea [(ngModel)]="model.descricao" name="descricao" type="text"></ion-textarea>
+    </ion-item>
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <ion-button center ion-button block (click)="save()">{{ title }}</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+</ion-content>

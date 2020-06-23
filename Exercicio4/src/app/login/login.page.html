@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Bem vindo ao aplicativo</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Entre com o seu usuário e senha abaixo ou registra-se na aplicação.
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item>
+      <ion-input [(ngModel)]="usuario.email" name="email" type="text" placeholder="Digite aqui seu E-Mail"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="usuario.senha" name="senha" type="password" placeholder="Digite aqui sua Senha"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-button (click)="login()" expand="block" color="secondary">Logar</ion-button>
+      <ion-button (click)="registrar()" expand="block" color="primary">Registrar</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
